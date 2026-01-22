@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto:wght@300;400;500&display=swap"
+    rel="stylesheet" />
+  <title>Student Details | Cotzaac</title>
+</head>
+
+<body>
+
+  <div class="top">
+    <div class="img">
+      <img src="Photos/Logo-3.png" alt="">
+    </div>
+    <div class="section">
+      <ul>
+        <li><a href="{{url_for('student_home')}}">Home</a></li>
+        <li><a href="{{url_for('student_form')}}">Create</a></li>
+        <li><a href="{{url_for('student_update')}}"> Update</a></li>
+        <li><a href="{{url_for('student_class')}}">Class Update</a></li>
+        <li><a href="{{url_for('student_contact')}}">Contact Update</a></li>
+      </ul>
+    </div>
+  </div>
+  <h1 class="h1">Students Informations</h1>
+  <p class="subtitle">
+    All registered students with contact, class, and timing **details**.</p>
+  <div class="t1">
+    <table>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>DOB</th>
+        <th>Blood Group</th>
+        <th>Class</th>
+        <th>Contact</th>
+        <th>Create Time</th>
+        <th>Update Time</th>
+      </tr>
+      {% for s in data %}
+      <tr>
+        <td>{{s.id}}</td>
+        <td>{{s.name}}</td>
+        <td>{{s.email}}</td>
+        <td>{{s.date_of_birth}}</td>
+        <td>{{s.blood_group}}</td>
+        <td>{{s.class_Std}}</td>
+        <td>{{s.primary_contact_number}}</td>
+        <td>{{s.created_at}}</td>
+        <td>{{s.updated_at}}</td>
+
+      </tr>
+      {% endfor %}
+    </table>
+  </div>
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <span>© 2025 Cotzaac.</span>
+      <span> Student Management System.</span>
+      <span class="footer-note">Built with FastAPI.</span>
+    </div>
+  </footer>
+
+
+</body>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    min-height: 100vh;
+    font-family: "Poppins", system-ui, sans-serif;
+    background: radial-gradient(circle at top left, #94a9c9 0, #a2acce 35%, #8cbbc0 100%);
+    display: flex;
+    flex-direction: column;
+
+  }
+.subtitle, p{
+  display: flex;
+  justify-content: center;
+  padding: 8px;
+}
+  img {
+    width: 160px;
+    height: auto;
+  }
+
+  .top {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+  }
+
+  .t1{
+    display: flex;
+    justify-content: center;
+  }
+
+  table {
+    margin: 50px;
+    background: radial-gradient(circle at top left, #e4e7ec 0, #e3e9fc 35%, #e1e7e7 100%);
+    /* width: 100%;*/
+    /* box-shadow: 5rem; */
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 20px;
+    padding: 40px;
+
+
+  }
+
+  td,
+  th {
+    padding: 8px;
+    text-align: center;
+    vertical-align: top;
+  }
+
+
+  th {
+    font-family: "Poppins", system-ui, sans-serif;
+    font-weight: 600;
+    font-size: 12.5px;
+    cursor: pointer;
+  }
+
+  td {
+    font-family: "Poppins", system-ui, sans-serif;
+    font-weight: 400;
+    font-size: 12.5px;
+    cursor: pointer;
+
+  }
+
+  table {
+    box-shadow: 0 8px 20px rgba(15, 15, 17, 0.952);
+    cursor: pointer;
+  }
+
+  table:hover {
+    box-shadow: 0 8px 20px rgba(166, 237, 250, 0.952);
+
+  }
+
+  ul {
+    display: flex;
+    flex-direction: row;
+    width: max-content;
+    font-weight: 700;
+    font-size: 10.8px;
+    gap: 20px;
+
+  }
+
+  li {
+    display: block;
+    padding: 22px;
+    font-family: "Poppins", system-ui, sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    border-radius: 30px;
+    color: aliceblue;
+    cursor: pointer;
+
+  }
+
+  li:hover {
+    transform: translateY(-3.6px);
+    background-color: rgb(130, 198, 230);
+    margin: 10px;
+    padding: 12px 12px;
+    box-shadow: 0 6px 16px rgba(158, 230, 233, 0.952);
+  }
+
+  a {
+    text-decoration: none;
+    color: rgb(15, 15, 15);
+  }
+
+  .h1 {
+    display: flex;
+    justify-content: center;
+    font-family: "Poppins", system-ui, sans-serif;
+    font-size: 50px;
+    background-image: linear-gradient(45deg, #492553, #3f363f 50%, #3b3744 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-transform: capitalize;
+    margin-top: 35px;
+    margin-left: 60px;
+  }
+
+  .site-footer,
+  .footer-inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    padding: 20px;
+  }
+
+  .footer-inner {
+    padding: 9px;
+  }
+</style>
+
+</html>

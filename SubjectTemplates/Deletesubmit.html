@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Deleted | Cotzaac</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="img">
+      <img src="SubPhotos/Logo-3.png" alt="">
+    </div>
+    <nav class="main-nav">
+      <a href="{{ url_for('home') }}" class="nav-link">Home</a>
+      <a href="{{ url_for('subject_home') }}" class="nav-link">Subject</a>
+      <a href="{{ url_for('subject_delete') }}" class="nav-link">Delete</a>
+      <a href="{{ url_for('subject_update') }}" class="nav-link">Update</a>
+    </nav>
+  </div>
+
+  <main class="error-page">
+    <div class="container">
+      <section class="error-card">
+        <p class="eyebrow">Subject lookup</p>
+        <h1>Subject ID Deleted Successfully</h1>
+        <p class="message">
+          {{ delete|default('The subject ID you entered is Deleted Successfully.') }}
+        </p>
+        <p class="hint">
+          Please enter another ID for delete, or create a new **subject** record.
+        </p>
+
+        <div class="actions">
+          <a href="{{ url_for('subject_delete') }}" class="btn btn-primary">Delete another ID</a>
+          <a href="{{ url_for('subject_form') }}" class="btn btn-outline">Create subject</a>
+        </div>
+      </section>
+    </div>
+  </main>
+    <div class="footer-inner">
+      <div class="img">
+        <img class="last" src="SubPhotos/Logo-3.png" alt="">
+      </div>
+      <span>© 2025 Cotzaac</span>
+      <span class="footer-note">Student Management System</span>
+    </div>
+
+
+</body>
+<style>
+  img {
+    padding: 10px;
+    width: 180px;
+    height: auto;
+
+  }
+
+  .last {
+    margin: 0;
+    padding: 0;
+    width: 150px;
+    height: auto;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    min-height: 100vh;
+    background: radial-gradient(circle at top left, #9ab7e0 0, #727d8a 40%, #d6d3d3 100%);
+
+  }
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .main-nav {
+    padding: 28px;
+    font-size: 0.8rem;
+  }
+
+  .nav-link {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding: 36px;
+    text-decoration: none;
+    color: #4b5563;
+    font-weight: 600;
+    cursor: pointer;
+  }
+
+  .nav-link:hover {
+    color: black;
+  }
+
+  .error-page {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2.5rem 0 2.8rem;
+  }
+
+  .error-card {
+    max-width: 560px;
+    padding: 2.4rem 2.6rem;
+    border-radius: 10px;
+    background: rgba(211, 209, 209, 0.96);
+    box-shadow: 0 20px 45px rgba(15, 23, 42, 0.14);
+  }
+.error-card:hover{
+  box-shadow: 0 20px 45px rgba(155, 225, 235, 0.993);
+}
+  .eyebrow {
+    font-size: 0.78rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-transform: uppercase;
+    color: #2563eb;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+
+  .error-card h1 {
+    font-size: 2rem;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+  }
+
+  .message {
+    font-size: 0.98rem;
+    color: var(--text-muted);
+    margin-bottom: 0.4rem;
+  }
+
+  .hint {
+    font-size: 0.9rem;
+    color: #374151;
+    margin-bottom: 1.4rem;
+  }
+
+  .actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+
+  /* Buttons */
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.6rem 1.4rem;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.18s ease;
+    border: 1px solid transparent;
+  }
+
+  .btn-primary {
+    background: linear-gradient(135deg, #2563eb, #1d4ed8);
+    color: #ffffff;
+    box-shadow: 0 14px 30px rgba(230, 232, 236, 0.89);
+  }
+
+  .btn-primary:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 18px 36px rgba(37, 99, 235, 0.45);
+  }
+
+  .btn-outline {
+    background: #ffffff;
+    color: var(--text-main);
+    border-color: rgba(148, 163, 184, 0.7);
+  }
+
+  .btn-outline:hover {
+    border-color: green;
+    background: #a0a1a1;
+  }
+
+  /* Footer */
+  .footer-inner {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8rem;
+    padding: 30px;
+  }
+</style>
+
+</html>

@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cotzaac</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto:wght@300;400;500&display=swap"
+        rel="stylesheet" />
+</head>
+
+<body>
+    <div class="top">
+        <div class="img">
+            <img src="Photos/Logo-3.png" alt="">
+        </div>
+        <ul class="ultop1">
+            <ul class="li1"><a href="{{url_for('home')}}">HOME</a></ul>
+            <li class="li1"><a href="{{url_for('student_home')}}">STUDENT</a></li>
+            <li class="li1"><a href="{{url_for('class_home')}}">CLASS</a></li>
+            <li class="li1"><a href="{{url_for('subject_home')}}">SUBJECT</a></li>
+            <li class="li1"><a href="{{url_for('about_us')}}">ABOUT</a></li>
+            <li class="li1"><a href="#contact">CONTACT US</a></li>
+        </ul>
+    </div>
+    <main>
+        <section class="hero">
+            <div class="container hero-inner">
+                <div class="hero-content">
+                    <div class="action">
+                        <div class="ani">
+                            <p class="eyebrow">hey ! Welcome to Cotzaac</p>
+                            <h1>Smart student management made simple.</h1>
+                            <p class="hero-subtitle">
+                                Create, organize, and track students, classes, and subjects in one **place** with a
+                                clean,
+                                intuitive interface.
+                            </p>
+                        </div>
+                            <img class="photo" src="Photos/home image.png" alt="">
+                    </div>
+                    <div class="hero-actions">
+                        <a href="" class="btn btn-primary">Get Started</a>
+                        <a href="#learnmore" class="btn btn-ghost">Learn More</a>
+                    </div>
+                    <div class="hero-meta">
+                        <span class="meta-item">Fast setup</span>
+                        <span class="dot"></span>
+                        <span class="meta-item">Secure data</span>
+                        <span class="dot"></span>
+                        <span class="meta-item">Web-based access</span>
+                    </div>
+                </div>
+            </div>
+            <section id="learnmore" class="quotes">
+                <div class="container">
+                    <h2 class="section-title">Leadership & management</h2>
+                    <div class="quotes-grid">
+                        <figure class="quote-card">
+                            <blockquote>
+                                “Management is doing things right; leadership is doing the right things.”
+                            </blockquote>
+                            <figcaption>— Peter F. Drucker</figcaption>
+                        </figure>
+
+                        <figure class="quote-card">
+                            <blockquote>
+                                “Management is efficiency in climbing the ladder of success; leadership determines
+                                whether
+                                the ladder is leaning against the right wall.”
+                            </blockquote>
+                            <figcaption>— Stephen R. Covey</figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </section>
+            <section id="about" class="about">
+                <div class="container about-inner">
+                    <div>
+                        <h2 class="section-title">Designed for institutes</h2>
+                        <p>
+                            Cotzaac helps administrators and teachers handle student records, classes, and subjects
+                            without
+                            complex **spreadsheets** or manual tracking.
+                        </p>
+                        <p>
+                            Built with a clean, responsive UI, it works smoothly on desktops, laptops, and tablets so
+                            your
+                            data is always within reach.
+                        </p>
+                    </div>
+                    <ul class="about-list">
+                        <li>Centralized student data management.</li>
+                        <li>Class and subject organization.</li>
+                        <li>Simple navigation and clear structure.</li>
+                        <li>Ready to integrate with your backend APIs.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="contact" class="contact">
+                <div class="container contact-inner">
+                    <div>
+                        <h2 class="section-title">Get in touch</h2>
+                        <p>
+                            Have questions or want to customize this system for your **institute**? Reach out and start
+                            a
+                            conversation.
+                        </p>
+                        <div class="social-links">
+                            <span>Follow us</span>
+                            <a class="social-icon" href="www.instagram.com"><i id="icon"
+                                    class="fab fa-instagram"></i></a>
+                            <a class="social-icon" href="www.facebook.com"><i id="icon"
+                                    class="fab fa-facebook-f"></i></a>
+                            <a class="social-icon" href="www.twitter.com"><i id="icon" class="fab fa-twitter"></i></a>
+
+                        </div>
+                    </div>
+                    <form id="signup" class="contact-form">
+                        <h3>Contact Us For Early Access</h3>
+                        <div class="form-row">
+                            <div class="form-field">
+                                <label for="name">Full name</label>
+                                <input type="text" id="name" placeholder="Enter your name" />
+                            </div>
+                            <div class="form-field">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" placeholder="you@example.com" />
+                            </div>
+                        </div>
+                        <div class="form-field">
+                            <label for="message">Message</label>
+                            <textarea id="message" rows="3" placeholder="Tell us about your requirements"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full">Submit</button>
+                    </form>
+                </div>
+            </section>
+    </main>
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <div class="img">
+                <img class="last" src="Photos/Logo-3.png" alt="">
+            </div>
+            <span>© 2025 Cotzaac. All rights reserved.</span>
+            <span class="footer-credit">Student Management System UI</span>
+        </div>
+    </footer>
+
+</body>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    img {
+        padding: 10px;
+        width: 180px;
+        height: auto;
+
+    }
+    .action{
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .photo{
+        padding: 0;
+        margin-left: 190px;
+        width: 600px;
+        height: 350px;
+        box-shadow: 0 20px 40px #7b94ca;
+        border-radius: 20px;
+    }
+
+    body {
+        font-family: "Roboto", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        background: radial-gradient(circle at top left, #c6dcfc 0, #e3e9fc 35%, #dafbff 100%);
+        line-height: 1.6;
+    }
+
+    .container {
+        width: 100%;
+        max-width: 1120px;
+        margin: 0 auto;
+        padding: 0 1.5rem;
+    }
+
+    .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50px;
+        font-family: "Poppins", system-ui, sans-serif;
+        font-weight: 500;
+        font-size: 0.9rem;
+        padding: 0.8rem 1.35rem;
+        border: none;
+        cursor: pointer;
+        text-decoration: none;
+        transition: all 0.18s ease;
+        white-space: nowrap;
+    }
+
+    .btn-primary {
+        background: linear-gradient(135deg, #2563eb, #1d4ed8);
+        color: #ffffff;
+        box-shadow: 0 18px 30px rgba(37, 99, 235, 0.32);
+    }
+
+    .btn-primary:hover {
+        background: linear-gradient(135deg, #1d4ed8, #1e40af);
+        transform: translateY(-1px);
+        box-shadow: 0 22px 40px rgba(37, 99, 235, 0.45);
+    }
+
+    .btn-ghost {
+        background: transparent;
+        color: var(--text-main);
+        padding-inline: 0.9rem;
+    }
+
+    .btn-ghost:hover {
+        background: rgba(86, 99, 129, 0.863);
+    }
+
+    .btn-full {
+        width: 100%;
+    }
+
+    .hero {
+        padding: 3.5rem 0 3.75rem;
+    }
+
+    .hero-inner {
+        display: grid;
+        grid-template-columns: minmax(0, 3fr) minmax(0, 2.5fr);
+        gap: 3.5rem;
+        align-items: center;
+    }
+
+    .hero-content h1 {
+        font-family: "Poppins", system-ui, sans-serif;
+        font-size: clamp(2.35rem, 3vw + 1.2rem, 3rem);
+        line-height: 1.1;
+        margin-bottom: 1rem;
+        letter-spacing: -0.03em;
+    }
+
+    .hero-content .eyebrow {
+        font-size: 1rem;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        color: rgb(87, 87, 209);
+        font-weight: 800;
+        margin-bottom: 0.6rem;
+    }
+
+
+
+    .eyebrow {
+        padding-left: 4px;
+    }
+
+    .hero-subtitle {
+        font-size: 0.98rem;
+        color: var(--text-muted);
+        max-width: 32rem;
+        margin-bottom: 1.6rem;
+    }
+
+    .hero-actions {
+        display: flex;
+        align-items: center;
+        gap: 0.9rem;
+        margin-bottom: 1rem;
+    }
+
+    .hero-meta {
+        display: flex;
+        align-items: center;
+        gap: 0.6rem;
+        font-size: 0.8rem;
+        color: var(--text-muted);
+    }
+
+    .hero-meta .dot {
+        width: 4px;
+        height: 4px;
+        border-radius: 999px;
+        background: rgba(148, 163, 184, 0.8);
+    }
+
+
+    .top {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .ultop1 {
+        display: inline-block;
+        padding: 12px;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-weight: 700;
+        font-size: 12px;
+        position: sticky;
+        z-index: 3;
+
+    }
+
+    .li1 {
+        display: inline-block;
+        margin: 10px;
+        padding: 13px 18px;
+        text-align: center;
+        text-transform: uppercase;
+        transition: 0.5s;
+        border-radius: 80px;
+    }
+
+    .li1:hover {
+        transform: translateY(-3.6px);
+        background-color: rgb(203, 223, 243);
+        box-shadow: 0 8px 20px rgba(141, 141, 143, 0.952);
+    }
+
+
+    a {
+        text-decoration: none;
+        color: black;
+    }
+
+
+    .button {
+        background-color: aliceblue;
+        margin: 1px;
+        padding: 14px 18px;
+        text-align: center;
+        transition: 0.5s;
+        color: rgb(32, 31, 31);
+        border-radius: 50px;
+        cursor: pointer;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-weight: 700;
+        font-size: 12.2px;
+        margin-left: 75px;
+    }
+
+    .button:hover {
+        transform: translateY(3.6px);
+        box-shadow: 0 8px 20px rgba(60, 60, 65, 0.952);
+        background-color: rgb(180, 220, 255);
+    }
+
+    i {
+        font-size: 14.9px;
+    }
+
+    /* Sections */
+    .section-title {
+        font-family: "Poppins", system-ui, sans-serif;
+        font-size: 1.45rem;
+        margin-bottom: 0.8rem;
+    }
+
+    /* Quotes */
+    .quotes {
+        padding: 2.5rem 0 2.8rem;
+    }
+
+    .quotes-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1.75rem;
+    }
+
+    .quote-card {
+        cursor: pointer;
+        padding: 1.4rem 1.5rem;
+        border-radius: 1rem;
+        background: rgba(255, 255, 255, 0.9);
+        border: 1px solid var(--border-subtle);
+        box-shadow: 0 8px 20px rgba(107, 107, 116, 0.952);
+    }
+
+    .quote-card:hover {
+        box-shadow: 0 8px 20px rgba(142, 208, 224, 0.952);
+    }
+
+    .quote-card blockquote {
+        font-style: italic;
+        color: #374151;
+        margin-bottom: 0.7rem;
+    }
+
+    .quote-card figcaption {
+        font-size: 0.85rem;
+        color: var(--text-muted);
+    }
+
+    /* About */
+    .about {
+        padding: 2.8rem 0 2.8rem;
+    }
+
+    .about-inner {
+        display: grid;
+        grid-template-columns: minmax(0, 2.2fr) minmax(0, 2fr);
+        gap: 2.25rem;
+        align-items: flex-start;
+    }
+
+    .about p {
+        color: var(--text-muted);
+        font-size: 0.95rem;
+        margin-bottom: 0.6rem;
+    }
+
+    .about-list {
+        list-style: circle #2c4b57;
+        display: grid;
+        gap: 0.55rem;
+        font-size: 0.94rem;
+    }
+
+    .about-list li {
+        position: relative;
+        padding-left: 1.3rem;
+        color: #374151;
+    }
+
+    /* Contact / Signup */
+    .contact {
+        padding: 3rem 0 2.6rem;
+    }
+
+    .contact-inner {
+        display: grid;
+        grid-template-columns: minmax(0, 2.2fr) minmax(0, 2.2fr);
+        gap: 2.3rem;
+        align-items: flex-start;
+    }
+
+    .social-links {
+        display: flex;
+        align-items: center;
+        gap: 0.9rem;
+        margin-top: 1.1rem;
+        font-size: 0.9rem;
+        color: var(--text-muted);
+    }
+
+    .social-icon {
+        width: 34px;
+        height: 34px;
+        border-radius: 999px;
+        border: 1px solid rgba(148, 163, 184, 0.65);
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        color: #111827;
+        text-decoration: none;
+        transition: all 0.2s ease;
+    }
+
+    .social-icon:hover {
+        background: rgb(148, 192, 230);
+        border-color: var(--primary);
+    }
+
+    /* Contact form */
+    .contact-form {
+        cursor: pointer;
+        padding: 1.6rem 1.5rem 1.7rem;
+        border-radius: 1rem;
+        background: rgba(255, 255, 255, 0.96);
+        border: 1px solid var(--border-subtle);
+        box-shadow: 0 8px 20px rgba(107, 107, 116, 0.952);
+    }
+
+    .contact-form:hover {
+        box-shadow: 0 8px 20px rgba(166, 214, 233, 0.952);
+    }
+
+    .contact-form h3 {
+        font-family: "Poppins", system-ui, sans-serif;
+        font-size: 1.05rem;
+        margin-bottom: 1rem;
+    }
+
+    .form-row {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1rem;
+        margin-bottom: 0.8rem;
+    }
+
+    .form-field {
+        display: flex;
+        flex-direction: column;
+        gap: 0.35rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .form-field label {
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+        color: var(--text-muted);
+    }
+
+    label {
+        font-weight: 700;
+    }
+
+    input,
+    textarea {
+        border-radius: 0.7rem;
+        padding: 0.65rem 0.8rem;
+        border: 1px solid rgba(148, 163, 184, 0.7);
+        font-family: inherit;
+        font-size: 0.9rem;
+        outline: none;
+        background: #f9fafb;
+        transition: border-color 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
+    }
+
+    input:focus,
+    textarea:focus {
+        border-color: var(--primary);
+        background: #ffffff;
+        box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.2);
+    }
+
+    /* Footer */
+    .site-footer {
+        border-top: 1px solid rgba(148, 163, 184, 0.25);
+        padding: 0.9rem 0;
+        background: rgba(248, 250, 252, 0.95);
+    }
+
+    .footer-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 0.8rem;
+        color: var(--text-muted);
+    }
+
+    .footer-credit {
+        opacity: 0.9;
+    }
+
+    .last {
+        margin: 0;
+        padding: 0;
+        width: 150px;
+        height: auto;
+    }
+</style>
+
+</html>

@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Student Registration Form</title>
+    <link rel="icon" type="image/png" href="Photos/owl logo 2.jpg">
+</head>
+
+<body>
+    <div class="top">
+        <img src="Photos/Logo-3.png" alt="">
+    </div>
+    <div class="body-container">
+        <div class="form-container">
+            <h2>🎓 Student Registration</h2>
+            <form action="/submit" method="post">
+                <input type="hidden" name="id">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="dob">Date of Birth</label>
+                    <input type="date" id="dob" name="date_of_birth" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="bloodgroup">Blood Group</label>
+                    <select id="bloodgroup" name="blood_group" required>
+                        <option value="">Select Blood Group</option>
+                        <option value="B+">B Positive</option>
+                        <option value="B-">B Negative</option>
+                        <option value="A+">A Positive</option>
+                        <option value="AB+">AB Positive</option>
+                        <option value="O+">O Positive</option>
+                        <option value="O-">O Negative</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="classStd">Class Standard</label>
+                    <input type="number" id="classStd" name="class_Std" min="1" max="12" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="primary_contact_number">Contact Number</label>
+                    <input type="tel" id="phone" name="primary_contact_number" required>
+                </div>
+                <input type="hidden" name="created_at">
+                <input type="hidden" name="updated_at">
+
+                <div class="form-buttons">
+                    <button type="submit" class="btn-submit">Submit</button>
+                    <button type="reset" class="btn-reset">Reset</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    
+    body {
+        background:  radial-gradient(circle at 10% 20%, rgba(255, 255, 255, 0.15) 0, transparent 40%),
+            radial-gradient(circle at 80% 0, rgba(255, 255, 255, 0.08) 0, transparent 50%),
+            #050816;
+
+    }
+
+    .body-container {
+        background-image: url("Photos/Cosmic\ astronaut\ cradles\ neon\ galaxy\ dust\ in\ deep\ space.\ 3840×2160.jpg");
+        background-repeat: no-repeat;
+        background-position: -180px;
+        background-size: contain;
+        background-attachment: fixed;
+        background-color: black;
+        transform: translateY(-1.6px);
+
+
+    }
+
+    .body-container {
+        position: relative;
+        bottom: px;
+        width: 950px;
+        height: 510px;
+        border-radius: 55px;
+        margin-left: 17%;
+        box-shadow: 0 8px 20px rgba(18, 18, 19, 0.623);
+        cursor: pointer;
+
+    }
+
+    .body-container:hover {
+        box-shadow: 0 8px 20px rgba(80, 178, 235, 0.952);
+
+    }
+
+
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .form-container {
+        margin-left: 58%;
+        margin-top: 18px;
+        background: linear-gradient(135deg, #98a397 0%, #2e332e 100%);
+        backdrop-filter: blur(10px);
+        padding: 32px;
+        border-radius: 40px;
+        box-shadow: 0 16px 32px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        max-width: 320px;
+        cursor: pointer;
+
+    }
+
+    h2 {
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        text-align: center;
+        color: rgb(27, 22, 22);
+        margin-bottom: 13px;
+        font-size: 16px;
+        font-weight: 600;
+        letter-spacing: 0.8px;
+    }
+
+    .form-group {
+        margin-bottom: 3px;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 3.4px;
+        color: rgb(27, 22, 22);
+        font-weight: 500;
+        font-size: 10.6px;
+        transition: color 0.3s ease;
+    }
+
+    input,
+    select {
+        width: 100%;
+        max-width: 250px;
+        height: 35px;
+        padding: 0 16px;
+        border: 1.6px solid #e1e5e9;
+        border-radius: 10px;
+        font-size: 11.8px;
+        background: #f8f9fa;
+        font-family: inherit;
+    }
+
+    input:focus,
+    select:focus {
+        outline: none;
+        border-color: #3690c4;
+        border-width: 2px;
+        background: #fff;
+        box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+
+    }
+
+    select {
+        cursor: pointer;
+        padding-right: 32px;
+    }
+
+    .form-buttons {
+        display: flex;
+        gap: 12px;
+        margin-top: 14px;
+    }
+
+    button {
+        flex: 1;
+        height: 36px;
+        border: none;
+        border-radius: 10px;
+        font-size: 10.6px;
+        font-weight: 600;
+        cursor: pointer;
+        font-family: inherit;
+        box-shadow: 0 8px 20px rgba(56, 38, 107, 0.623);
+    }
+
+    .btn-submit {
+        background-image: linear-gradient(45deg, rgb(65, 89, 208) 0%, rgb(200, 79, 192) 50%, rgb(255, 205, 112) 100%);
+        color: rgb(7, 6, 6);
+    }
+
+    .btn-submit:hover {
+        transform: translateY(-1.6px);
+        box-shadow: 0 8px 20px rgba(18, 18, 19, 0.623);
+    }
+
+    .btn-reset {
+        background-image: linear-gradient(45deg, rgb(65, 89, 208) 0%, rgb(200, 79, 192) 50%, rgb(255, 205, 112) 100%);
+        color: rgb(7, 6, 6);
+        border: 1.6px;
+    }
+
+    .btn-reset:hover {
+        transform: translateY(-1.6px);
+        box-shadow: 0 8px 20px rgba(18, 18, 19, 0.623);
+    }
+
+    img {
+        width: 220px;
+        height: auto;
+        filter: brightness(0) invert(1);
+
+    }
+</style>
+
+</html>
